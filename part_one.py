@@ -30,14 +30,14 @@ def posibily_probabilty(posicion, index):
             result = result + estados[i]
     return result
 
-def probabilidadValoresPropios(posicion, index):
-    matrices = [[[(1,0),(0,0)],[(0,0),(-1,0)]],[[(0,0),(0,-1)],[(0,1),(0,0)]],[[(0,0),(1,0)],[(1,0),(0,0)]]]
+def probrabily_Values_Propies(posicion, index):
+    matrix = [[[(1,0),(0,0)],[(0,0),(-1,0)]],[[(0,0),(0,-1)],[(0,1),(0,0)]],[[(0,0),(1,0)],[(1,0),(0,0)]]]
     values_propies = []
     aux = posibily_probabilty(posicion, index)
     pro= []
     answer = 0
     for i in range(3):
-        values,no = np.linalg.eig(matrices[i])
+        values,no = np.linalg.eig(matrix[i])
         values_propies+=values
     for i in range(len(aux)):
         pro+=problability(posicion, aux[i])
